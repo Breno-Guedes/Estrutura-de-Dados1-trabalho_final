@@ -1,4 +1,4 @@
-# 📊 Benchmark de Algoritmos de Ordenação em C
+# Benchmark de Algoritmos de Ordenação em C
 
 Este projeto implementa e compara o desempenho de **algoritmos clássicos de ordenação** utilizando a linguagem **C**, com foco em análise de tempo de execução para diferentes tamanhos de entrada.
 
@@ -6,7 +6,7 @@ Os resultados são registrados em um arquivo **CSV**, permitindo posterior visua
 
 ---
 
-## 🚀 Algoritmos Implementados
+## Algoritmos Implementados
 
 O projeto contempla os seguintes algoritmos:
 
@@ -19,7 +19,7 @@ Cada algoritmo é executado sobre **vetores aleatórios**, garantindo igualdade 
 
 ---
 
-## 🧠 Estrutura do Projeto
+## Estrutura do Projeto
 
 - **Gerenciamento de Vetor**
   - Criação dinâmica
@@ -37,7 +37,7 @@ Cada algoritmo é executado sobre **vetores aleatórios**, garantindo igualdade 
 
 ---
 
-## ⏱️ Metodologia de Benchmark
+## Metodologia de Benchmark
 
 1. Um vetor base é gerado com valores aleatórios.
 2. Para cada algoritmo:
@@ -51,10 +51,10 @@ Bubble Sort e Insertion Sort possuem complexidade \(O(n^2)\) e podem apresentar 
 
 ---
 
-## 📁 Exemplo de Saída (CSV)
+## Exemplo de Saída (CSV)
 
 ```csv
 Tamanho,Tempo(s),Algoritmo,Ordem
-10000,0.012345,Bubble Sort,Aleatoria
-10000,0.000987,Quick Sort,Aleatoria
+10000,2.4500,Bubble Sort,Aleatoria
+10000,0.00987,Quick Sort,Aleatoria
 
