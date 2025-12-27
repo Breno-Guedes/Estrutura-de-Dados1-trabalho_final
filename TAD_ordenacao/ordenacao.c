@@ -82,7 +82,7 @@ void merge_aux(int *arr, int l, int m, int r) {
     if (!L || !R) {
         if (L) free(L);
         if (R) free(R);
-        return; // Falha de memória
+        return;
     }
 
     for (i = 0; i < n1; i++) L[i] = arr[l + i];
