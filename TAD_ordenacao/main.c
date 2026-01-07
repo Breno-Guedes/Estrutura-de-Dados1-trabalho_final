@@ -3,8 +3,8 @@
 int main() {
     srand((unsigned int)time(NULL));
 
-    int tamanhos[] = {50000, 100000, 150000, 200000, 250000, 300000};
-    int qtd_tamanhos = 6;
+    int tamanhos[] = {100, 1000, 10000, 100000};
+    int qtd_tamanhos = 4;
 
     const char *arquivo = "resultados.csv";
 

@@ -20,10 +20,8 @@ void liberar_vetor(Vetor *v) {
     }
 }
 
-// Preenche com números aleatórios
 void preencher_aleatorio(Vetor *v) {
     for (int i = 0; i < v->tamanho; i++) {
-        // Gera números entre 0 e tamanho*2 para ter alguma repetição mas espalhado
         v->dados[i] = rand() % (v->tamanho * 2);
     }
 }
@@ -74,11 +72,9 @@ void merge_aux(int *arr, int l, int m, int r) {
     int n1 = m - l + 1;
     int n2 = r - m;
 
-    // Alocação dinâmica para evitar Stack Overflow em arrays grandes na pilha
     int *L = (int*) malloc(n1 * sizeof(int));
     int *R = (int*) malloc(n2 * sizeof(int));
 
-    // Verificação de segurança
     if (!L || !R) {
         if (L) free(L);
         if (R) free(R);
@@ -152,7 +148,7 @@ void quick_sort(int *arr, int n) {
 
 double medir_tempo(void (*algoritmo)(int*, int), Vetor *v) {
     clock_t inicio, fim;
-    Vetor *copia = copiar_vetor(v); // Clona para não estragar o original
+    Vetor *copia = copiar_vetor(v);
 
     inicio = clock();
     algoritmo(copia->dados, copia->tamanho);
@@ -190,9 +186,9 @@ void executar_benchmark(int tamanhos[], int qtd_tamanhos, const char *arquivo_sa
 
             double tempo = medir_tempo(funcs_algo[k], base);
 
-            printf("Concluido em %.4fs\n", tempo);
+            printf("Concluido em %.20fs\n", tempo);
 
-            fprintf(fp, "%d,%.6f,%s,Aleatoria\n", tam, tempo, nomes_algo[k]);
+            fprintf(fp, "%d,%.20f,%s,Aleatoria\n", tam, tempo, nomes_algo[k]);
         }
 
         liberar_vetor(base);
